@@ -15,7 +15,8 @@ app.use(cookieParser());
 app.use(express.json()); //middleware to parse json data
 //mongodb -> connection string 
 app.use(cors({
-  credentials: true,
+    origin: "https://linked-in-frontend-alpha.vercel.app",
+    credentials: true
 }));
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('MongoDB connected'))
